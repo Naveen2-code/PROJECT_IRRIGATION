@@ -12,13 +12,17 @@
 body {
     font-family: 'Inter', sans-serif;
     margin: 0;
-    background: #f5f6fa;
-    color: #1e1e2f;
+    background: linear-gradient(rgba(15,23,42,0.7), rgba(15,23,42,0.7)),
+                url('civil-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
 }
+
 .dashboard {
     display: flex;
     min-height: 100vh;
 }
+
 .sidebar {
     width: 280px;
     background: #0f172a;
@@ -28,13 +32,16 @@ body {
     flex-direction: column;
     gap: 1.5rem;
 }
+
 .sidebar h2 {
     font-weight: 800;
     font-size: 1.5rem;
 }
+
 .sidebar .info p {
     margin: 0.3rem 0;
 }
+
 .sidebar a {
     padding: 0.7rem 1rem;
     background: #1e293b;
@@ -43,28 +50,54 @@ body {
     border-radius: 0.5rem;
     text-align: center;
     display: inline-block;
+    transition: 0.3s;
 }
+
+.sidebar a:hover {
+    background: #0ea5e9;
+}
+
 .main {
     flex: 1;
     padding: 2rem;
 }
+
 .main header h1 {
     font-weight: 800;
     margin-bottom: 1rem;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #0ea5e9;
+    font-style: italic;
 }
+
 .paper {
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0.9);
     padding: 2rem;
     border-radius: 1rem;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    color: #000;
 }
+
 .paper a {
     color: #0ea5e9;
     text-decoration: underline;
 }
-.loading {
-    font-style: Bold,italic;
-    color: #7b8b64;
+
+/* Profile Image */
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 10px;
+    border: 3px solid #0ea5e9;
+}
+
+.info {
+    text-align: center;
 }
 </style>
 </head>
@@ -75,30 +108,35 @@ body {
     <!-- Sidebar -->
     <aside class="sidebar">
         <h2>🏗️ CIVIL ENGINEERING STUDENTS</h2>
-        <h3> EDIT BEFORE USE </h3>
+        <h3>EDIT BEFORE USE</h3>
+
         <div class="info">
-            <p><strong>Engineer:</strong> Naveen Adhikari</p>
-            <p><strong>Status:</strong> Naveen: files</p>
+            <img src="naveen.jpg" alt="Naveen Adhikari" class="profile-pic">
+            <p><strong>Admin:</strong> Naveen Adhikari</p>
+            <p><strong>Status:</strong> Active</p>
         </div>
 
         <!-- File Link -->
-        <a href="https://www.mediafire.com/file/jl4u7kfknj1g8z8/project.zip/file.html" target="_blank">
-            📄 Download pdf 
+        <a href="https://www.mediafire.com/file/jl4u7kfknj1g8z8/project.zip/file" target="_blank">
+            📄 Download PDF
         </a>
     </aside>
 
     <!-- Main Content -->
     <main class="main">
         <header>
-            <h1 style="font-size: xx-large;font-style: italic,BOLD; background-color: #0ea5e9;">WESTERN IRRIGATION TOUR</h1>
+            <h1>WESTERN IRRIGATION TOUR</h1>
         </header>
 
         <div class="paper">
-            <p style="color: rgb(255, 0, 0);">📄 DOWNLOAD FROM HERE :
-            </p>
-            <a href="https://www.mediafire.com/file/jl4u7kfknj1g8z8/project.zip/file.html" target="_blank">Download Civil Irrigation Report</a>
+            <p style="color: red;">📄 DOWNLOAD FROM HERE :</p>
+
+            <a href="https://www.mediafire.com/file/jl4u7kfknj1g8z8/project.zip/file" target="_blank">
+                Download Civil Irrigation Report
+            </a>
         </div>
     </main>
-</div
+
+</div>
 </body>
 </html>
