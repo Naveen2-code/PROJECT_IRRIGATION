@@ -1,0 +1,157 @@
+:root {
+    --bg: #0a0f1f;
+    --glass: rgba(255,255,255,0.05);
+    --blue: #38bdf8;
+    --glow: rgba(56,189,248,0.6);
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: 'Inter', sans-serif;
+    background: radial-gradient(circle at top, #0f172a, #020617);
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* LAYOUT */
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 260px;
+    background: var(--glass);
+    backdrop-filter: blur(20px);
+    border-right: 1px solid rgba(255,255,255,0.1);
+    padding: 30px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* LOGO */
+.logo {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.sidebar h2 {
+    color: var(--blue);
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+/* INFO */
+.info {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.info p {
+    font-size: 0.7rem;
+    opacity: 0.6;
+}
+
+.info h3 {
+    font-weight: 700;
+}
+
+/* BUTTONS */
+.actions {
+    width: 100%;
+}
+
+.actions a, .actions button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    text-align: center;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.actions a:hover, .actions button:hover {
+    background: var(--blue);
+    box-shadow: 0 0 15px var(--glow);
+    transform: translateY(-2px);
+}
+
+/* MAIN */
+.main {
+    flex: 1;
+    padding: 30px;
+    color: white;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.status {
+    background: var(--blue);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+}
+
+/* PAPER */
+.paper {
+    margin-top: 20px;
+    background: white;
+    color: #334155;
+    padding: 50px;
+    height: 80vh;
+    overflow-y: auto;
+    border-radius: 10px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+}
+
+/* LOADING */
+.loading {
+    text-align: center;
+    color: var(--blue);
+}
+
+/* DOCX */
+#viewer h1, #viewer h2 {
+    color: var(--blue);
+}
+
+/* SCROLLBAR */
+.paper::-webkit-scrollbar {
+    width: 8px;
+}
+
+.paper::-webkit-scrollbar-thumb {
+    background: var(--blue);
+    border-radius: 10px;
+}
+
+/* PRINT */
+@media print {
+    .sidebar, .header {
+        display: none;
+    }
+
+    .paper {
+        height: auto;
+    }
+}
